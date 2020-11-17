@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title><%= title %></title>
+    <%- include ('./partials/stylesheet') %>
+</head>
+<body>
+<h1>Ma logo</h1>
+<div class="container">
+    <% if (message.length > 0) { %>
+        <div class="alert alert-warning" role="alert">
+            <strong>Warning!</strong> <%= message %>.
+        </div>
+    <% } %>
+    <form class="form-signin" action="/signup" method="post">
+        <h2 class="form-signin-heading">Please signup</h2>
+        <label for="inputName" class="sr-only">Username</label>
+        <input type="text" id="username" name="username" class="form-control"
+               placeholder="Username" required="">
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="password" name="password"
+               class="form-control" placeholder="Password" required="">
+
+        <button class="btn btn-lg btn-primary btn-block"
+                type="submit">Confirm</button>
+        <br>
+        <p>Already joined? <a href="/">Sign in</a></p>
+    </form>
+</div>
+<%- include ('./partials/footer') %>
+<%- include ('./partials/javascripts') %>
+</body>
+</html>

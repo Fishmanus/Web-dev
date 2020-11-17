@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title><%= title %></title>
+    <%- include ('./partials/stylesheet') %></head>
+<body>
+<h1>Ma logo</h1>
+<div class="container">
+    <% if (message.length > 0) { %>
+        <div class="alert alert-warning alert-dismissible
+                   fade in" role="alert">
+            <button type="button" class="close" data-dismiss=
+            "alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Ohps!</strong> <%= message %>.
+        </div>
+    <% } %>
+    <form class="form-signin" action="/login" method="post">
+        <h2 class="form-signin-heading">Login AAA app now!</h2>
+        <label for="inputName" class="sr-only">Username</label>
+        <input type="username" id="username" name="username" class="form-
+              control" placeholder="Username" required="">
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="password" name="password"
+               class="form-control" placeholder="Password" required="">
+
+        <button class="btn btn-lg btn-primary btn-block"
+                type="submit">Sign in</button>
+        <br>
+        <p>Don't have an account? <a href="/signup">Signup</a></p>
+    </form>
+</div>
+<%- include ('./partials/footer') %>
+<%- include ('./partials/javascripts') %>
+</body>
+</html>

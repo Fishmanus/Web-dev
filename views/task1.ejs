@@ -1,0 +1,17 @@
+<html>
+<head>
+    <%- include ('./partials/stylesheet') %>
+</head>
+<body>
+<%- include ('./partials/navbar') %>
+<h1>Ma logo</h1>
+<h2><%= title %></h2>
+<p> Input date: <%= msg %></p>
+<% if (isWorkDay) {%>
+<img src="../assets/workTime.jpg">
+<%} else {%>
+<img src="../assets/chill.jpg">
+<%}%>
+<!-- <p>{{txt}}</p> -->
+</body>
+</html>
